@@ -1,4 +1,8 @@
 APPLeotesteen::Application.routes.draw do
+  resources :users
+	
+	
+
   get "pages/home"
 
   get "pages/contact"
@@ -9,6 +13,8 @@ APPLeotesteen::Application.routes.draw do
 match '/contact', :to => 'pages#contact'
 match '/about', :to => 'pages#about'
 match '/geheim', :to => 'pages#geheim'
+match '/signup', :to => 'users#new'
+match '/index', :to => 'users#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

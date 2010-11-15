@@ -14,4 +14,6 @@ class PagesController < ApplicationController
 def geheim
   	@title = "secret"
   end
+  
+  
 end
