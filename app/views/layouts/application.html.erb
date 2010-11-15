@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Polderprojects test application | <%= @title%></title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-  <nav class="round">
-<ul>
-<li><%= link_to "Home", root_path %></li>
-<li><%= link_to "about", about_path %></li>
-<li><%= link_to "contact", contact_path %></li>
-<li><%= link_to "geheim", geheim_path %></li>
-<li><%= link_to "Sign up now!", signup_path, :class => "signup_button round" %></li>
-</ul>
-</nav>
-</head>
-<body>
 
+<body>
+<%= render 'layouts/header' %>
+<section class="round">
+<% flash.each do |key, value| %>
+<div class="flash <%= key %>"><%= value %></div>
+<% end %>
 <%= yield %>
+</section>
+
 
 </body>
 </html>

@@ -73,4 +73,4 @@ PLATFORMS
 DEPENDENCIES
   gravatar_image_tag (= 0.1.0)
   rails (= 3.0.0)
- sqlite3-ruby
+  sqlite3-ruby
